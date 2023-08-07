@@ -10,7 +10,7 @@ function Hero() {
         <a href='#services' className='button bg-gray-200 p-5 rounded-2xl w-32 flex justify-center self-center'>Explore</a>
           </div>
         </Parallax>
-          <img src="./waveobj.svg" className='w-96 h-96 scale-150 top-auto bottom-auto left-auto right-auto absolute'/>
+          {/* <img src="./waveobj.svg" className='w-96 h-96 scale-150 top-auto bottom-auto left-auto right-auto absolute'/> */}
       </div>
   );
 }
