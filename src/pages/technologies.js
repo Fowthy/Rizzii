@@ -1,31 +1,54 @@
+import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
+
+function TechnologyCard({title, desc, img}) {
+  return (
+    <div className='flex flex-col items-center'>
+      <img src={img} alt={title} className='h-20 w-20'/>
+      <h3 className='text-xl'>{title}</h3>
+      {/* <p className='text-center'>{desc}</p> */}
+    </div>
+  )
+}
 
 function Technologies() {
+
+  const title = "Technologies we mastered";
+
+  const technologies = [
+    {
+      title: 'Facebook Ads',
+      desc: 'React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies.',
+      img: 'https://www.edigitalagency.com.au/wp-content/uploads/Facebook-logo-blue-circle-large-white-f.png'
+    },
+    {
+      title: 'Instagram Ads',
+      desc: 'Tailwind CSS is a utility-first CSS framework for rapidly building custom user interfaces.',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png'
+    },
+    {
+      title: 'LinkedIn',
+      desc: 'FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.6+ based on standard Python type hints.',
+      img: 'https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png'
+    },
+    {
+      title: 'Twitter',
+      desc: 'MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas.',
+      img: 'https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-twitter-social-media-round-icon-png-image_6315985.png'
+    },
+  ];
   return (
-    <div className='technologies'>
-    <div className='flex justify-center pt-24 mt-80 pb-80'>
-      <div className=' grid grid-flow-row gap-4 grid-cols-2'>
-        <div className='flex flex-col'>
-          <img src='https://cdn.worldvectorlogo.com/logos/react-2.svg' alt='react' className='h-20 w-20'/>
-          <p className='flex'>A</p>
-        </div>
-        <div className='flex flex-col'>
-          <img src='https://cdn.worldvectorlogo.com/logos/react-2.svg' alt='react' className='h-20 w-20'/>
-          <p>A</p>
-        </div>
-        <div className='flex flex-col'>
-          <img src='https://cdn.worldvectorlogo.com/logos/react-2.svg' alt='react' className='h-20 w-20'/>
-          <p>A</p>
-        </div>
-        <div className='flex flex-col'>
-          <img src='https://cdn.worldvectorlogo.com/logos/react-2.svg' alt='react' className='h-20 w-20'/>
-          <p>A</p>
+    <div className='technologies' id='technologies'>
+      <Parallax speed={20}>
+        <div className=' p-8 pt-24 mt-80 pb-80 flex-col flex'>
+          <h2 className='text-center mb-20 text-3xl'>{title}</h2>
+          <div className=' grid grid-flow-row gap-11 grid-cols-3 mb-11 md:mb-0 md:pl-20 md:pr-20 lg:pl-60 lg:pr-60'>
+           {technologies.map((technology) => (
+             <TechnologyCard title={technology.title} desc={technology.desc} img={technology.img}/>
+            ))}
         </div>
       </div>
-      <div className='flex justify-center ml-20'>
-        <h1>Technologies</h1>
-      </div>
-    </div>
-    <img src="./wave2.svg" className=''/>
+      </Parallax>
+      <img src="./wave4.svg" className=''/>
   </div>
   );
 }

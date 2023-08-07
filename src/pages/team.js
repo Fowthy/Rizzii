@@ -1,7 +1,7 @@
 
 function Team() {
   return (
-    <div className='team'>
+    <div className='team' id='team'>
     <img src='./wave5.svg'/>
     <h1 className='text-4xl text-center mb-10'>Our Team</h1>
     <div className='flex justify-center'>
@@ -14,7 +14,7 @@ function Team() {
         <h1 className='text-2xl'>Ivan</h1>
         </div>
       </div>
-      <img src='./wave (6).svg'/>
+      <img src='./wave6.svg'/>
   </div>
   );
 }
