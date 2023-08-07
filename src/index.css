@@ -25,19 +25,7 @@ code {
 
   height: 100vh;
 }
-.technologies {
-  background-image: url('./wave3.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  overflow: hidden;
 
-  /* height: 100vh; */
-}
-.services {
-  background-image:url('./wave.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
-}
 
 .footer {
   background-color: #35012C;

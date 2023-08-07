@@ -4,7 +4,7 @@ function TechnologyCard({title, desc, img}) {
   return (
     <div className='flex flex-col items-center'>
       <img src={img} alt={title} className='h-20 w-20'/>
-      <h3 className='text-xl'>{title}</h3>
+      <h3 className='text-xl text-center'>{title}</h3>
       {/* <p className='text-center'>{desc}</p> */}
     </div>
   )
@@ -12,7 +12,7 @@ function TechnologyCard({title, desc, img}) {
 
 function Technologies() {
 
-  const title = "Technologies we mastered";
+  const title = "What we have mastered";
 
   const technologies = [
     {
@@ -35,15 +35,31 @@ function Technologies() {
       desc: 'MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas.',
       img: 'https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-twitter-social-media-round-icon-png-image_6315985.png'
     },
+    {
+      title: 'Front-end Development with React, NextJS and TailwindCSS',
+      desc: '',
+      img: 'https://cdn.worldvectorlogo.com/logos/react-2.svg'
+    },
+    {
+      title: 'Back-end Development with FastAPI, Java, MongoDB, and MySQL',
+      desc: '',
+      img: 'https://cdn.worldvectorlogo.com/logos/fastapi.svg'
+    },
+    {
+      title: 'Containerization with Docker and scaling with kubernetes',
+      desc: '',
+      img: 'https://cdn.worldvectorlogo.com/logos/docker.svg' 
+    }
   ];
   return (
     <div className='technologies' id='technologies'>
-      <Parallax speed={20}>
-        <div className=' p-8 pt-24 mt-80 pb-80 flex-col flex'>
+      <img src="./wave3.svg" className=''/>
+      <Parallax speed={10}>
+        <div className='flex-col flex'>
           <h2 className='text-center mb-20 text-3xl'>{title}</h2>
           <div className=' grid grid-flow-row gap-11 grid-cols-3 mb-11 md:mb-0 md:pl-20 md:pr-20 lg:pl-60 lg:pr-60'>
-           {technologies.map((technology) => (
-             <TechnologyCard title={technology.title} desc={technology.desc} img={technology.img}/>
+           {technologies.map((technology, i) => (
+             <TechnologyCard key={i} title={technology.title} desc={technology.desc} img={technology.img}/>
             ))}
         </div>
       </div>
