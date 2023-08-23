@@ -27,7 +27,6 @@ function Contact() {
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
-    console.log('doing')
 
     emailjs.sendForm('rizzii_contact', 'template_cn1s8c1', form.current, 'GKmCRmJKeUsJDve6W')
       .then((result) => {

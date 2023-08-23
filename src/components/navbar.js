@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useScroll } from './scrollprovider';
 import NavbarTab from "./navtab";
 import NavbarLogo from "./navlogo";
 
@@ -10,9 +9,7 @@ function Navbar() {
   let openCloseNavMobile = () => {
     navbarOpen ? setNavbarOpen(false) : setNavbarOpen(true);
   }
-  const { scrollY } = useScroll();
-
-  console.log(scrollY)
+  console.log(window.scrollY, 'tukaaa')
   const navtabs = [
     {
       name: 'Services',
@@ -51,7 +48,7 @@ function Navbar() {
           <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             {navtabs.map((tab, i) => {
               return (
-                <NavbarTab key={i} active={active} setActive={setActive} name={tab.name} link={tab.link} scrolly={scrollY} scroll={tab.scroll} />
+                <NavbarTab key={i} active={active} setActive={setActive} name={tab.name} link={tab.link} scroll={tab.scroll} />
               )
             })}
           </ul>

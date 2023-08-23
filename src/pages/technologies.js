@@ -4,7 +4,7 @@ function TechnologyCard({title, desc, img}) {
   return (
     <div className='flex flex-col items-center'>
       <img src={img} alt={title} className='h-20 w-20'/>
-      <h3 className='text-xl text-center'>{title}</h3>
+      {/* <h3 className='text-xl text-center'>{title}</h3> */}
       {/* <p className='text-center'>{desc}</p> */}
     </div>
   )
@@ -18,7 +18,7 @@ function Technologies() {
     {
       title: 'Facebook Ads',
       desc: 'React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies.',
-      img: 'https://www.edigitalagency.com.au/wp-content/uploads/Facebook-logo-blue-circle-large-white-f.png'
+      img: 'https://cdn.worldvectorlogo.com/logos/facebook-3.svg'
     },
     {
       title: 'Instagram Ads',
@@ -57,7 +57,7 @@ function Technologies() {
       <Parallax speed={10}>
         <div className='flex-col flex'>
           <h2 className='text-center mb-20 text-3xl'>{title}</h2>
-          <div className=' grid grid-flow-row gap-11 grid-cols-3 mb-11 md:mb-0 md:pl-20 md:pr-20 lg:pl-60 lg:pr-60'>
+          <div className=' grid grid-flow-row gap-5 grid-cols-7 mb-11 m-auto'>
            {technologies.map((technology, i) => (
              <TechnologyCard key={i} title={technology.title} desc={technology.desc} img={technology.img}/>
             ))}
