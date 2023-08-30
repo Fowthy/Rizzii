@@ -31,8 +31,12 @@ function App() {
           <Navbar scrollpos={scrollPosition}/>
             <Hero/>
           <Services/>
+          <div className='separator1'></div>
           <Technologies/>
-          <Team/>
+          <div className='separator2'></div>
+
+          {/* <Team/> */}
+          
           <Contact/>
           <Footer/>
         </ParallaxProvider>

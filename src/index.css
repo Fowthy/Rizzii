@@ -24,19 +24,40 @@ code {
 
 .hero {
   background-color: #35012C;
+  background-image: url('./assets/bg1.jpg');
 
   height: 100vh;
-  clip-path:url("#clipWave");
-
+  
+  background-size: cover; 
+  width: 100%;
 }
 .hero .clipped {
   height:118vh;
+  width: 100vw;
   position:absolute;
+  top:0;
 }
 .hero svg {
-  height: 0;
+  height: 100vh;
+  width:100vw;
 }
-
+.separator1 {
+  background-image: url('./assets/bg22.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100vh;
+}
+.separator2 {
+  background-image: url('./assets/bg3.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100vh;
+}
+.contactus {
+  margin-top:-400px;
+}
 .hero .hero-wrapper  {
   margin: 100px auto;
 }

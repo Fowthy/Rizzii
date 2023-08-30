@@ -36,8 +36,7 @@ function Contact() {
       });
   };
   return (
-    <div className="team" id="team">
-      <img src="./wave5.svg" />
+    <div className="contactus bg-gray-800" id="contactus">
       <div className="flex justify-center">
         <section className="bg-white dark:bg-gray-900 rounded-xl">
           <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">

@@ -77,7 +77,6 @@ function Services() {
         ))}
       </div>
       </Parallax>
-      <img src="./bg2.jpg" className="wavebg mt-10 h-[1500px]" />
     </div>
   );
 }
