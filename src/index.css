@@ -10,6 +10,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
+
+  /* background-image: url('./assets/bg2.jpg'); */
 }
 html {
   scroll-behavior: smooth;
@@ -24,10 +26,37 @@ code {
   background-color: #35012C;
 
   height: 100vh;
+  clip-path:url("#clipWave");
+
+}
+.hero .clipped {
+  height:118vh;
+  position:absolute;
+}
+.hero svg {
+  height: 0;
 }
 
+.hero .hero-wrapper  {
+  margin: 100px auto;
+}
+.hero .hero-wrapper h2 {
+  text-shadow: 0 0 2px rgba(255,255,255,.1), 0 0 2px rgba(255,255,255,.5);
+  font-weight: bold;
+}
+.services svg {
+  height: 0;
+}
+
+.wavebg {
+  background-color: #35012C;
+  clip-path:url("#clipWave2");
+}
 
 .footer {
   background-color: #35012C;
   min-height: 30rem;
+}
+.paralax-container {
+  height: 100%;
 }

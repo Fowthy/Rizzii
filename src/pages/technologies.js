@@ -53,7 +53,6 @@ function Technologies() {
   ];
   return (
     <div className='technologies' id='technologies'>
-      <img src="./wave3.svg" className=''/>
       <Parallax speed={10}>
         <div className='flex-col flex'>
           <h2 className='text-center mb-20 text-3xl'>{title}</h2>
@@ -64,7 +63,6 @@ function Technologies() {
         </div>
       </div>
       </Parallax>
-      <img src="./wave4.svg" className=''/>
   </div>
   );
 }
