@@ -52,8 +52,9 @@ code {
   background-image: url('./assets/bg3.jpg');
   background-repeat: no-repeat;
   background-size: contain;
-  width: 100%;
-  height: 100vh;
+  width: 100vw;
+  height: auto;
+  display: flex;
 }
 .contactus {
   margin-top:-400px;
@@ -80,4 +81,10 @@ code {
 }
 .paralax-container {
   height: 100%;
+}
+
+@media screen and (max-width:576px) {
+  .separator2 {
+    height: 71vh;
+  }
 }
